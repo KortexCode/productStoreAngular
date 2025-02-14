@@ -5,28 +5,27 @@
       <form [formGroup]="formAddControl" (ngSubmit)="addProduct()">
         <input formControlName="name" type="text" class="form-control" placeholder="name">
         <span style="font-size: 12px;"
-          *ngIf="formAddControl.get('name')?.hasError('required') && formAddControl.get('name')?.touched">The
-          field
-          is
-          <strong>required</strong></span>
+          *ngIf="formAddControl.get('name')?.hasError('required') && formAddControl.get('name')?.touched">The field is
+          <strong>required</strong>
+        </span>
 
         <input formControlName="description" type="text" class="form-control mt-3" placeholder="Description">
         <span style="font-size: 12px;"
           *ngIf="formAddControl.get('description')?.hasError('required') && formAddControl.get('description')?.touched">
-          The field is<strong>required</strong></span>
+          The field is<strong>required</strong>
+        </span>
 
         <input formControlName="price" type="number" class="form-control mt-3" placeholder="Price">
         <span style="font-size: 12px;"
-          *ngIf="formAddControl.get('price')?.hasError('required') && formAddControl.get('price')?.touched">The
-          field
-          is
-          <strong>required</strong></span>
+          *ngIf="formAddControl.get('price')?.hasError('required') && formAddControl.get('price')?.touched">The field is
+          <strong>required</strong>
+        </span>
 
         <input formControlName="stock" type="number" class="form-control mt-3" placeholder="Stock">
         <span style="font-size: 12px;"
-          *ngIf="formAddControl.get('stock')?.hasError('required') && formAddControl.get('stock')?.touched">The
-          field is
-          <strong>required</strong></span>
+          *ngIf="formAddControl.get('stock')?.hasError('required') && formAddControl.get('stock')?.touched">The field is
+          <strong>required</strong>
+        </span>
 
         <div class="d-flex flex-row justify-content-center mt-3">
           <button type="submit" class="btn btn-primary w-50">Accept</button>

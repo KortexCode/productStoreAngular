@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ProductStoreAngular
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# productStoreAngular
+proyecto de Frontend para registros en un almacén
+>>>>>>> a9958b931b28513f64d07ae5143091cc1c254f8d
