@@ -6,15 +6,11 @@ import { environment } from '../../environments/environment.development';
   providedIn: 'root',
 })
 export class ProductService {
-  private myAppUrl: string;
-  private myApiUrl: string;
+  private myApiUrl: string = environment.endpoint;
 
-  constructor(private http: HttpClient) {
-    this.myAppUrl = environment.endpoint;
-    this.myApiUrl = 'api/v1/products';
-  }
+  constructor(private http: HttpClient) {}
 
   getListProducts() {
-    return this.http.get(`${this.myAppUrl}${this.myApiUrl}`);
+    return this.http.get(`${this.myApiUrl}/products`);
   }
 }

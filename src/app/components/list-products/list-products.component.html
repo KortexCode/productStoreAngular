@@ -16,10 +16,10 @@
       </tr>
     </thead>
     <tbody>
-      @for (item of listProducts; track item.name) {
+      @for (item of listProducts.products; track item.id) {
       <tr>
-        <td>{{item.name}}</td>
-        <td>{{item.description}}</td>
+        <td>{{item.product_name}}</td>
+        <td>{{item.product_description}}</td>
         <td>{{item.price}}</td>
         <td>{{item.stock}}</td>
         <td class="d-flex flex-row justify-content-around">

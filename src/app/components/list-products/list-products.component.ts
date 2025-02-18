@@ -10,30 +10,16 @@ import { ProductService } from '../../service/product.service';
   styleUrl: './list-products.component.scss',
 })
 export class ListProductsComponent {
-  listProducts: Product[] = [
-    {
-      id: 1,
-      name: 'Warcraft 3 reforged',
-      description: 'Juego de estrategia en tiempo real',
-      price: 250,
-      stock: 20,
-    },
-    {
-      id: 2,
-      name: 'World of warcraft Classic',
-      description: 'Juego de rol en tiempo real',
-      price: 500,
-      stock: 10,
-    },
-  ];
+  listProducts: any;
   constructor(private _productService: ProductService) {}
   ngOnInit() {
     this.getProducts();
   }
 
   getProducts() {
-    this._productService
-      .getListProducts()
-      .subscribe((data) => console.log(data));
+    this._productService.getListProducts().subscribe((data) => {
+      this.listProducts = data;
+      console.log(this.listProducts.products);
+    });
   }
 }
