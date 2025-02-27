@@ -19,7 +19,7 @@ export class ListProductsComponent {
   getProducts() {
     this._productService.getListProducts().subscribe((data) => {
       this.listProducts = data;
-      console.log(this.listProducts.products);
+      console.log(this.listProducts);
     });
   }
 }
