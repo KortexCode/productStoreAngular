@@ -20,7 +20,6 @@
           *ngIf="formAddControl.get('price')?.hasError('required') && formAddControl.get('price')?.touched">The field is
           <strong>required</strong>
         </span>
-
         <input formControlName="stock" type="number" class="form-control mt-3" placeholder="Stock">
         <span style="font-size: 12px;"
           *ngIf="formAddControl.get('stock')?.hasError('required') && formAddControl.get('stock')?.touched">The field is
