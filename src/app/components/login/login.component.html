@@ -1,19 +1,29 @@
 <div class="d-flex flex-column justify-content-center align-items-center vw-100 vh-100 container-login">
 
   <body class="d-flex flex-column justify-content-center align-items-center login-body">
-    <h3 class="mb-4 login-title">Login</h3>
+    <h3 class="mb-3 login-title">Login</h3>
     <img src="img/login.png" class="login-img" alt="login">
+
     <div class="input-container">
-      <div class="form-floating mt-4 mb-3">
-        <input type="text" class="form-control input-login" placeholder="Mikoto31">
-        <label for="floatingPassword">User name</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" placeholder="123*secret">
-        <label>Password</label>
-      </div>
+      <form [formGroup]="formControl">
+        <div *ngIf="loading" class="d-flex justify-content-center mt-3">
+          <app-spinner></app-spinner>
+        </div>
+        <div class="form-floating mt-3 mb-3">
+          <input type="text" class="form-control input-login" placeholder="Mikoto31" formControlName="user_name">
+          <label for="floatingPassword">User name</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" placeholder="123*secret" formControlName="user_password">
+          <label>Password</label>
+        </div>
+      </form>
     </div>
-    <button class="btn btn-lg btn-primary mt-4 sign-up-btn " type="button">Sign Up</button>
-    <p class="mt-2 text-white">Forgot password?</p>
+    <button class="btn btn-lg btn-primary mt-3 sign-up-btn " type="button" (click)="loginUser()">Sign Up</button>
+    <div class="mt-2">
+      <span class="mt-2 me-2 text-white">Don't have an account yet?</span>
+      <a routerLink="/sign-in" class="text-info">Register</a>
+    </div>
+
   </body>
 </div>

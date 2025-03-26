@@ -1,1 +1,28 @@
-<p>sign-in works!</p>
+<div class="d-flex flex-column justify-content-center align-items-center vw-100 vh-100 container-login">
+  <body class="d-flex flex-column justify-content-center align-items-center login-body">
+    <h3 class="mb-3 login-title">Register</h3>
+    <img src="img/login.png" class="login-img" alt="login">
+    <div class="input-container">
+      <div *ngIf="loading" class="d-flex justify-content-center mt-3">
+        <app-spinner></app-spinner>
+      </div>
+      <form [formGroup]="formControl">
+        <div class="form-floating mt-3 mb-3">
+          <input [value]="formControl.get('user_name')?.value" type="text" class="form-control input-login" placeholder="Mikoto31" formControlName="user_name">
+          <label for="floatingPassword">User name</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control input-login" placeholder="123*secret" formControlName="user_password">
+          <label>Password</label>
+        </div>
+        <div class="form-floating mt-3">
+          <input type="password" class="form-control input-login" placeholder="123*secret" formControlName="repeat_user_password">
+          <label>Repeat Password</label>
+        </div>
+    </form>
+    </div>
+    <button class="btn btn-lg btn-primary mt-4 sign-up-btn " type="button" (click)="createUser()">Sign In</button>
+    <a routerLink="/login" class="mt-2 text-info">Back</a>
+  </body>
+</div>
+

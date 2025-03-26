@@ -1,14 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#">Products CRUD</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-      aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <form class="d-flex ms-auto">
-        <input class="form-control me-sm-2" type="search" placeholder="Search">
-      </form>
-    </div>
+<nav class="p-3 bg-primary" data-bs-theme="dark">
+  <div class="w-100 d-flex align-items-center justify-content-between">
+    <p class="d-block m-0 text-white fs-bold" style="font-size: 24px;">Products CRUD</p>
+    <p class="d-block border border-1 fs-bold bg-white text-dark log-out" (click)="logOut()">Log out</p>
   </div>
 </nav>
